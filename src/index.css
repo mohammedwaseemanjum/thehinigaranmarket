@@ -1,0 +1,7 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* You can keep your other global styles below */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
