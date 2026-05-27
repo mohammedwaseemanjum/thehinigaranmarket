@@ -15,19 +15,20 @@ import SandwichMenu from '@/assets/sandwich_menu.png'
 import ChickenRoastMenu from '@/assets/chicken_roast_menu.png'
 
 import { mergeClass } from '@/utils/mergeClass'
+
 const menuStyle = 'min-w-[clamp(150px,10vw,500px)] flex flex-col items-center justify-center'
-const imageMenuStyle = 'h-[clamp(150px,30vw,250px)] w-fit'
+const imageMenuStyle = 'min-h-[clamp(150px,20vw,250px)] w-fit'
 const menuTextStyle = 'text-[clamp(12px,4vw,36px)]! text-black!'
 
 const Blog: React.FC = () => {
     return (
         <div className="bg-transparent flex flex-col">
-            <div className='m-auto py-[clamp(10px,2vw,100px)]'>
-                <img src={Logo} className='object-cover h-[clamp(80px,20vw,250px)]'/>
+            <div className='m-auto py-[clamp(10px,2vw,30px)]'>
+                <img src={Logo} className='object-cover h-[clamp(80px,20vw,150px)]'/>
             </div>
-            <div className="bg-[url('assets/pizza.png')] bg-no-repeat bg-right bg-cover w-full min-h-[clamp(200px,40vw,650px)] py-[clamp(5px,5vw,90px)]">
+            <div className="bg-[url('assets/pizza.png')] bg-no-repeat bg-right bg-cover w-full min-h-[clamp(200px,40vw,650px)] py-[clamp(5px,5vw,30px)]">
                 <div className='flex flex-col w-[clamp(300px,20vw,500px)] px-[clamp(1rem,10vw,10rem)] gap-[clamp(5px,5vw,90px)]'>
-                    <Text as='p' className='text-[clamp(12px,5vw,80px)]! w-[clamp(180px,50vw,800px)] leading-[clamp(16px,6vw,70px)]!'>
+                    <Text as='p' className='text-[clamp(12px,5vw,80px)]! w-[clamp(180px,50vw,800px)] leading-[clamp(16px,5vw,80px)]!'>
                         Order Healthy and Fresh Food Any Time
                     </Text>
                     <Text as='p' className='text-gray-500! text-[clamp(12px,2.5vw,30px)]! w-[clamp(150px,50vw,800px)]'>
