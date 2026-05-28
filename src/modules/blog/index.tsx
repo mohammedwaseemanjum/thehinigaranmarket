@@ -16,8 +16,8 @@ import ChickenRoastMenu from '@/assets/chicken_roast_menu.png'
 
 import { mergeClass } from '@/utils/mergeClass'
 
-const menuStyle = 'min-w-[clamp(150px,10vw,500px)] flex flex-col items-center justify-center'
-const imageMenuStyle = 'min-h-[clamp(150px,20vw,250px)] w-fit'
+const menuStyle = 'min-w-[clamp(150px,30vw,600px)] flex flex-col items-center p-4 md:p-6'
+const imageMenuStyle = 'h-[clamp(100px,20vw,500px)] w-[clamp(150px,40vw,800px)]'
 const menuTextStyle = 'text-[clamp(12px,4vw,36px)]! text-black!'
 
 const Blog: React.FC = () => {
@@ -28,7 +28,7 @@ const Blog: React.FC = () => {
             </div>
             <div className="bg-[url('assets/pizza.png')] bg-no-repeat bg-right bg-cover w-full min-h-[clamp(200px,40vw,650px)] py-[clamp(5px,5vw,30px)]">
                 <div className='flex flex-col w-[clamp(300px,20vw,500px)] px-[clamp(1rem,10vw,10rem)] gap-[clamp(5px,5vw,90px)]'>
-                    <Text as='p' className='text-[clamp(12px,5vw,80px)]! w-[clamp(180px,50vw,800px)] leading-[clamp(16px,5vw,80px)]!'>
+                    <Text as='p' className='text-[clamp(12px,5vw,80px)]! w-[clamp(180px,50vw,800px)] leading-[clamp(16px,6vw,80px)]!'>
                         Order Healthy and Fresh Food Any Time
                     </Text>
                     <Text as='p' className='text-gray-500! text-[clamp(12px,2.5vw,30px)]! w-[clamp(150px,50vw,800px)]'>
@@ -60,29 +60,42 @@ const Blog: React.FC = () => {
             <div className='flex flex-col items-center justify-center'>
                 <Text as='p' className='text-[clamp(25px,5vw,78px)]! text-black! py-5'>Restaurant Menu</Text>
             
-                <div className='grid grid-cols-1 sm:grid-cols-3 px-4 mt-4 gap-10'>
+                <div className='grid grid-cols-2 sm:grid-cols-3'>
                     <div className={mergeClass(menuStyle)}>
                         <img src={PizzaMenu} className={mergeClass(imageMenuStyle)}/>
-                        <Text as='p' className={mergeClass(menuTextStyle)}>Pizza</Text>
+                        <div className='flex flex-col items-center'>
+                            <Text as='p' className={mergeClass(menuTextStyle)}>Pizza</Text>
+                        </div>
                     </div>
                     <div className={mergeClass(menuStyle)}>
                         <img src={BurgerMenu} className={mergeClass(imageMenuStyle)}/>
-                        <Text as='p' className={mergeClass(menuTextStyle)}>Burger</Text>
+                        <div className='flex flex-col items-center'>
+                            <Text as='p' className={mergeClass(menuTextStyle)}>Burger</Text>
+                        </div>
                     </div>
                     <div className={mergeClass(menuStyle)}>
                         <img src={PastaMenu} className={mergeClass(imageMenuStyle)}/>
-                        <Text as='p' className={mergeClass(menuTextStyle)}>Pasta</Text>
+                        <div className='flex flex-col items-center'>
+                            <Text as='p' className={mergeClass(menuTextStyle)}>Pasta</Text>
+                        </div>
                     </div>
                     <div className={mergeClass(menuStyle)}>
                         <img src={ChickenMenu} className={mergeClass(imageMenuStyle)}/>
-                        <Text as='p' className={mergeClass(menuTextStyle)}>Chicken</Text>
+                        <div className='flex flex-col items-center'>
+                            <Text as='p' className={mergeClass(menuTextStyle)}>Chicken</Text>
+                        </div>
                     </div>
 
                     <div className={mergeClass(menuStyle)}>
                         <img src={DessertMenu} className={mergeClass(imageMenuStyle)}/>
-                        <Text as='p' className={mergeClass(menuTextStyle)}>Pizza</Text>
+                        <div className='flex flex-col items-center'>
+                            <Text as='p' className={mergeClass(menuTextStyle)}>Dessert</Text>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                Restuarants
             </div>
         </div>
     )

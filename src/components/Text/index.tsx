@@ -40,6 +40,7 @@ const Text = <T extends React.ElementType = "span"> ({ children, className, as, 
                 mergeClass(
                     className, 
                     variantMap,
+                    'font-brand'
                 )
             }
         >
