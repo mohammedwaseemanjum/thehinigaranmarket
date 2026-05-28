@@ -17,7 +17,7 @@ import ChickenRoastMenu from '@/assets/chicken_roast_menu.png'
 import { mergeClass } from '@/utils/mergeClass'
 
 const menuStyle = 'min-w-[clamp(150px,30vw,600px)] flex flex-col items-center p-4 md:p-6'
-const imageMenuStyle = 'h-[clamp(100px,20vw,500px)] w-[clamp(150px,40vw,800px)]'
+const imageMenuStyle = 'h-[clamp(100px,15vw,200px)] w-[clamp(150px,20vw,400px)]'
 const menuTextStyle = 'text-[clamp(12px,4vw,36px)]! text-black!'
 
 const Blog: React.FC = () => {
