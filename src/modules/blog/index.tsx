@@ -25,17 +25,19 @@ const imageMenuStyle = 'px-[clamp(0.5rem,0.35714285714285715rem+0.71428571428571
 const menuTextStyle = 'text-[clamp(1.125rem,0.8839285714285714rem+1.2053571428571428vw,2.8125rem)]! text-black!'
 
 const imageRestaurantStyle = 'rounded-tl-md rounded-tr-md'
-const imageLogoRestaurantStyle = 'object-contain rounded-lg w-[clamp(2.5rem,1.875rem+3.125vw,6.875rem)]'
-const restaurantTextStyle = 'pt-4 px-6 text-[clamp(1.375rem,0.9017857142857143rem+2.3660714285714284vw,4.6875rem)]! text-black! truncate'
+const imageLogoRestaurantStyle = 'object-contain rounded-lg w-[45px]'
+const restaurantTextStyle = 'pt-4 px-[clamp(12px,0.5357vw+10.2857px,24px)] text-[clamp(22px,0.8036vw+19.4286px,40px)]! text-black! truncate'
 const resDiv = 'rounded-md shadow-md bg-white'
+const subText = 'text-[clamp(14px,0.1786vw+13.4286px,18px)]! text-gray-600! truncate!'
 
 const Blog: React.FC = () => {
     return (
-        <div className="bg-transparent flex flex-col">
+        <div>
             <div className='m-auto py-[clamp(10px,2vw,30px)]'>
                 <img src={Logo} className='object-cover h-[clamp(50px,20vw,150px)]'/>
             </div>
-            <div className="bg-[url('assets/pizza.png')] bg-no-repeat bg-center bg-cover h-[clamp(18.75rem,13.392857142857142rem+26.785714285714285vw,56.25rem)] py-[clamp(2rem,1.5714285714285714rem+2.142857142857143vw,5rem)]">
+            <div className="bg-transparent flex flex-col gap-4">
+            <div className="bg-[url('assets/pizza.png')] bg-no-repeat bg-center bg-cover h-[clamp(18.75rem,13.392857142857142rem+26.785714285714285vw,56.25rem)]">
                 <div className='flex flex-col w-[clamp(20rem,13.035714285714286rem+34.82142857142857vw,68.75rem)] gap-[clamp(0.875rem,0.2857142857142857rem+2.946428571428571vw,5rem)] px-[clamp(0.625rem,-0.1785714285714285rem+4.017857142857142vw,6.25rem)]'>
                     <Text as='p' className='text-[clamp(1.875rem,1.3392857142857144rem+2.6785714285714284vw,5.625rem)]! leading-[clamp(1.875rem,1.3392857142857144rem+2.6785714285714284vw,5.625rem)]!'>
                         Order Healthy and Fresh Food Any Times
@@ -66,9 +68,8 @@ const Blog: React.FC = () => {
                 </div>
             </div>
 
-            <div>
-                <Text as='p' className='text-center text-[clamp(1.5rem,1rem+2.5vw,5rem)]! text-black! py-5'>Restaurant Menu</Text>
-
+            <div className='flex flex-col gap-4'>
+                <Text as='p' className='text-center text-[clamp(28px,1.6518vw+22.7143px,65px)]! text-black!'>Restaurant Menu</Text>
                 <div className='grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-4'> 
                     <div className={mergeClass(menuStyle)}>
                         <img src={PizzaMenu} className={mergeClass(imageMenuStyle)}/>
@@ -104,34 +105,60 @@ const Blog: React.FC = () => {
                 </div>
             </div>
 
-            <div className='bg-gray-200 py-8'>
-                <Text as='p' className='text-center text-[clamp(25px,5vw,78px)]! text-black!'>Restaurants</Text>
+            <div className='bg-gray-200 pb-8 px-4'>
+                <Text as='p' className='text-center text-[clamp(28px,1.6518vw+22.7143px,65px)]! text-black! py-4'>Restaurants</Text>
                 
-                <div className='grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 px-4'>
-                    <div className={resDiv}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+                    <div className={mergeClass(resDiv)}>
                         <img src={DrinkRestaurant} className={mergeClass(imageRestaurantStyle)}/>
                         <Text as='p' className={restaurantTextStyle}>Organic Arcadian Food</Text>
-                        <div className='flex flex-row px-6 py-4'>
+                        
+                        <div className='flex flex-row px-[clamp(12px,0.5357vw+10.2857px,24px)] py-4 items-center'>
                             <img src={FoodChef} className={imageLogoRestaurantStyle}/>
-                            <div className='flex flex-col ml-2 md:ml-4'>
-                                <Text as='p' className='text-[clamp(0.9375rem,0.6696428571428572rem+1.3392857142857142vw,2.8125rem)]! text-gray-600! truncate!'>12:00AM - 12:00PM</Text>
-                                <Text as='p' className='text-[clamp(0.9375rem,0.6696428571428572rem+1.3392857142857142vw,2.8125rem)]! text-gray-600! truncate!'>Link road, Model Town</Text>
+                            <div className='flex flex-col ml-2'>
+                                <Text as='p' className={subText}>12:00AM - 12:00PM</Text>
+                                <Text as='p' className={subText}>Link road, Model Town</Text>
                             </div>
                         </div>
                     </div>
 
-                    <div className={resDiv}>
+                    <div className={mergeClass(resDiv)}>
                         <img src={HotDogRestaurant} className={mergeClass(imageRestaurantStyle)}/>
                         <Text as='p' className={restaurantTextStyle}>Food Chef Italian</Text>
-                        <div className='p-2 flex flex-row px-6 py-4'>
+                        <div className='p-2 flex flex-row px-[clamp(12px,0.5357vw+10.2857px,24px)] py-4 items-center'>
                             <img src={FoodChef} className={imageLogoRestaurantStyle}/>
-                            <div className='flex flex-col ml-2 md:ml-4'>
-                                <Text as='p' className='text-[clamp(0.9375rem,0.6696428571428572rem+1.3392857142857142vw,2.8125rem)]! text-gray-600! truncate'>12:00AM - 12:00PM</Text>
-                                <Text as='p' className='text-[clamp(0.9375rem,0.6696428571428572rem+1.3392857142857142vw,2.8125rem)]! text-gray-600! truncate'>Link road, Model Town</Text>
+                            <div className='flex flex-col ml-2'>
+                            <Text as='p' className={subText}>12:00AM - 12:00PM</Text>
+                                <Text as='p' className={subText}>Link road, Model Town</Text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={mergeClass(resDiv)}>
+                        <img src={HotDogRestaurant} className={mergeClass(imageRestaurantStyle)}/>
+                        <Text as='p' className={restaurantTextStyle}>Food Chef Italian</Text>
+                        <div className='p-2 flex flex-row px-[clamp(12px,0.5357vw+10.2857px,24px)] py-4 items-center'>
+                            <img src={FoodChef} className={imageLogoRestaurantStyle}/>
+                            <div className='flex flex-col ml-2'>
+                            <Text as='p' className={subText}>12:00AM - 12:00PM</Text>
+                                <Text as='p' className={subText}>Link road, Model Town</Text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={mergeClass(resDiv)}>
+                        <img src={HotDogRestaurant} className={mergeClass(imageRestaurantStyle)}/>
+                        <Text as='p' className={restaurantTextStyle}>Food Chef Italian</Text>
+                        <div className='p-2 flex flex-row px-[clamp(12px,0.5357vw+10.2857px,24px)] py-4 items-center'>
+                            <img src={FoodChef} className={imageLogoRestaurantStyle}/>
+                            <div className='flex flex-col ml-2'>
+                            <Text as='p' className={subText}>12:00AM - 12:00PM</Text>
+                                <Text as='p' className={subText}>Link road, Model Town</Text>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
 
             <div className='p-10'>
