@@ -100,7 +100,7 @@ const Store: React.FC = () => {
                         </Tab>
                     </div>
 
-                    <div className='shadow-md rounded-md border border-gray-200 p-4 bg-white'>
+                    <div className='shadow-md rounded-md border border-gray-200 p-4 bg-white lg:h-[clamp(280px,53.125vw+110px,1470px)] overflow-hidden'>
                         <TabListContent index={0}>
                             <div>
                                 <Text as='p' className='text-black! text-[clamp(20px,1.7857vw+14.2857px,60px)]! text-center'>
@@ -117,10 +117,10 @@ const Store: React.FC = () => {
                                         )) }
                                     </div>
                                 </div>
-                                <div className='mt-6 flex flex-col gap-5 overflow-auto h-[680px] '>
+                                <div className='mt-6 flex flex-col gap-5 overflow-auto h-[clamp(280px,43.3036vw+141.4286px,1250px)] no-scrollbar'>
                                     {
-                                        Array.from([1,2,3,4,5,6]).map(_ => (
-                                            <div className='flex flex-row gap-4 border-0 border-gray-300 border-b-2 last:border-b-0 pb-2'>
+                                        Array.from([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]).map(_ => (
+                                            <div className='flex flex-row gap-4 border-0 border-gray-300 border-b-2 last:border-b-0 pb-2 shrink-0'>
                                                 <div>
                                                     <img src={PizzaMenu} className='w-[150px]'/>
                                                 </div>
@@ -151,7 +151,7 @@ const Store: React.FC = () => {
                             Best Selling Products
                         </Text>
 
-                        <div className='flex flex-row overflow-auto gap-2 w-full lg:flex-col '>
+                        <div className='flex flex-row overflow-auto gap-2 w-full lg:flex-col no-scrollbar'>
                             {
                                 Array.from([1,2,3,4,5,6]).map(_ => (
                                     <div className='border-2 border-gray-300 flex flex-col shrink-0 p-4 gap-4'>
