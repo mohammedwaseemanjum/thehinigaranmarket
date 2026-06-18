@@ -84,9 +84,9 @@ const Store: React.FC = () => {
                     </div>
                 </div>
 
-                <div className='grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4'>
-                    <div className='shadow-md rounded-md border border-gray-200 h-[clamp(120px,3.5714vw+108.5714px,200px)] bg-white'>
-                        <Text as='p' className='text-black! text-[clamp(20px,1.7857vw+14.2857px,60px)]! text-center leading-[clamp(20px,1.7857vw+14.2857px,60px)]! py-2'>
+                <div className='grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] py-4 px-4 gap-4 md:grid-cols-2 xl:flex xl:flex-row xl:justify-center xl:gap-6 xl:px-10'>
+                    <div className='shadow-md rounded-md border border-gray-200 h-[clamp(120px,3.5714vw+108.5714px,200px)] bg-white xl:w-100'>
+                        <Text as='p' className='text-black! text-[clamp(20px,0.4464vw+18.5714px,30px)]! text-center py-2'>
                             All Detail
                         </Text>
                         <Tab defaultActiveIndex={0} containerClass='flex flex-col'>
@@ -100,32 +100,32 @@ const Store: React.FC = () => {
                         </Tab>
                     </div>
 
-                    <div className='shadow-md rounded-md border border-gray-200 p-4 bg-white lg:h-[clamp(280px,53.125vw+110px,1470px)] overflow-hidden'>
+                    <div className='shadow-md rounded-md border border-gray-200 p-4 bg-white lg:h-[clamp(280px,53.125vw+110px,1470px)] overflow-hidden xl:w-[clamp(400px,26.0417vw+133.3333px,800px)]'>
                         <TabListContent index={0}>
                             <div>
-                                <Text as='p' className='text-black! text-[clamp(20px,1.7857vw+14.2857px,60px)]! text-center'>
+                                <Text as='p' className='text-black! text-[clamp(20px,0.4464vw+18.5714px,30px)]! text-center'>
                                     Categorys
                                 </Text>
                                 <div className='mt-4 rounded-md overflow-scroll no-scrollbar'>
                                     <div className='flex flex-row gap-2'>
                                         { categories.map(category => (
                                             <div className='bg-gray-300 px-4 py-1 rounded-md'>
-                                                <Text as='p' className='text-black! text-[clamp(16px,0.7143vw+13.7143px,32px)]! text-center'>
+                                                <Text as='p' className='text-black! text-[clamp(14px,0.625vw+12px,28px)]! text-center'>
                                                     {category.name}
                                                 </Text>
                                             </div>
                                         )) }
                                     </div>
                                 </div>
-                                <div className='mt-6 flex flex-col gap-5 overflow-auto h-[clamp(280px,43.3036vw+141.4286px,1250px)] no-scrollbar'>
+                                <div className='mt-6 flex flex-col gap-4 overflow-auto h-[clamp(280px,43.3036vw+141.4286px,1250px)] no-scrollbar'>
                                     {
                                         Array.from([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]).map(_ => (
-                                            <div className='flex flex-row gap-4 border-0 border-gray-300 border-b-2 last:border-b-0 pb-2 shrink-0'>
-                                                <div>
-                                                    <img src={PizzaMenu} className='w-[150px]'/>
+                                            <div className='flex flex-row gap-6 border-0 border-gray-300 border-b-2 last:border-b-0 py-2.5'>
+                                                <div className='shrink-0'>
+                                                    <img src={PizzaMenu} className='w-[clamp(100px,2.2321vw+92.8571px,150px)]'/>
                                                 </div>
-                                                <div className='flex flex-col items-start gap-2'>
-                                                    <Text as='p' className='text-black! text-[clamp(14px,0.9821vw+10.8571px,36px)]! text-center'>
+                                                <div className='flex flex-col items-start justify-center gap-2 lg:gap-4'>
+                                                    <Text as='p' className='text-black! text-[clamp(14px,0.625vw+12px,28px)]! text-center'>
                                                         Cauliflower Pizza
                                                     </Text>
                                                     <Text as='p' className='text-black! text-[clamp(12px,0.5357vw+10.2857px,24px)]! text-left font-normal!'>
@@ -146,12 +146,12 @@ const Store: React.FC = () => {
                         </TabListContent>
                     </div>
 
-                    <div className='shadow-md rounded-md border border-gray-200 bg-white flex flex-col p-4 gap-4 overflow-hidden lg:h-[clamp(280px,53.125vw+110px,1470px)]'>
-                        <Text as='p' className='text-black! text-[clamp(20px,1.7857vw+14.2857px,60px)]! text-center'>
+                    <div className='shadow-md rounded-md border border-gray-200 bg-white flex flex-col p-4 gap-4 overflow-hidden lg:h-[clamp(280px,53.125vw+110px,1470px)] lg:w-[clamp(400px,6.5104vw+333.3333px,500px)]'>
+                        <Text as='p' className='text-black! text-[clamp(20px,0.4464vw+18.5714px,30px)]! text-center'>
                             Best Selling Products
                         </Text>
 
-                        <div className='flex flex-row overflow-auto gap-2 w-full lg:flex-col no-scrollbar'>
+                        <div className='flex flex-row overflow-auto gap-2 w-full md:flex-col no-scrollbar'>
                             {
                                 Array.from([1,2,3,4,5,6]).map(_ => (
                                     <div className='border-2 border-gray-300 flex flex-col shrink-0 p-4 gap-4'>
@@ -159,7 +159,7 @@ const Store: React.FC = () => {
                                             <img src={PizzaMenu} className='w-[clamp(150px,24.5536vw+71.4286px,700px)]'/>
                                         </div>
                                         <div className='flex flex-col items-start gap-2'>
-                                            <Text as='p' className='text-black! text-[clamp(14px,0.9821vw+10.8571px,36px)]! text-center'>
+                                            <Text as='p' className='text-black! text-[clamp(14px,0.625vw+12px,28px)]! text-center'>
                                                 Cauliflower Pizza
                                             </Text>
                                             <Text as='p' className='text-black! text-[clamp(12px,0.5357vw+10.2857px,24px)]! text-center'>
