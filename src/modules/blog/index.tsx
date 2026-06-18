@@ -73,32 +73,32 @@ const Blog: React.FC = () => {
             <div className='flex flex-col gap-10'>
                 <Text as='p' className='text-center text-[clamp(28px,1.6518vw+22.7143px,65px)]! text-black!'>Restaurant Menu</Text>
                 <div className='grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-4 px-[clamp(8px,5vw-8px,120px)]'> 
-                    <div className={mergeClass(menuStyle)}>
+                    <div className={mergeClass(menuStyle)} onClick={() => navigate('/search')}>
                         <img src={PizzaMenu} className={mergeClass(imageMenuStyle)}/>
                         <div className='flex flex-col items-center'>
                             <Text as='p' className={mergeClass(menuTextStyle)}>Pizza</Text>
                         </div>
                     </div>
-                    <div className={mergeClass(menuStyle)}>
+                    <div className={mergeClass(menuStyle)} onClick={() => navigate('/search')}>
                         <img src={BurgerMenu} className={mergeClass(imageMenuStyle)}/>
                         <div className='flex flex-col items-center'>
                             <Text as='p' className={mergeClass(menuTextStyle)}>Burger</Text>
                         </div>
                     </div>
-                    <div className={mergeClass(menuStyle)}>
+                    <div className={mergeClass(menuStyle)} onClick={() => navigate('/search')}>
                         <img src={PastaMenu} className={mergeClass(imageMenuStyle)}/>
                         <div className='flex flex-col items-center'>
                             <Text as='p' className={mergeClass(menuTextStyle)}>Pasta</Text>
                         </div>
                     </div>
-                    <div className={mergeClass(menuStyle)}>
+                    <div className={mergeClass(menuStyle)} onClick={() => navigate('/search')}>
                         <img src={ChickenMenu} className={mergeClass(imageMenuStyle)}/>
                         <div className='flex flex-col items-center'>
                             <Text as='p' className={mergeClass(menuTextStyle)}>Chicken</Text>
                         </div>
                     </div>
 
-                    <div className={mergeClass(menuStyle)}>
+                    <div className={mergeClass(menuStyle)} onClick={() => navigate('/search')}>
                         <img src={DessertMenu} className={mergeClass(imageMenuStyle)}/>
                         <div className='flex flex-col items-center'>
                             <Text as='p' className={mergeClass(menuTextStyle)}>Dessert</Text>
