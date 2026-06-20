@@ -23,7 +23,7 @@ const ResturantLogo = () => {
                         <div className='h-[clamp(50px,2.2321vw+42.8571px,100px)] w-[clamp(3.125rem,2.6785714285714284rem+2.232142857142857vw,6.25rem)]' key={restuarant.id}>
                             <LazyImage
                                 key={restuarant.id}
-                                src={restuarant.image}
+                                src={`https://backend-core-market.vercel.app/${restuarant.image}`}
                                 alt={restuarant.name}
                                 className='object-contain rounded-lg'
                                 loaderClass='h-[clamp(50px,2.2321vw+42.8571px,100px)] w-[clamp(3.125rem,2.6785714285714284rem+2.232142857142857vw,6.25rem)] rounded-lg'
