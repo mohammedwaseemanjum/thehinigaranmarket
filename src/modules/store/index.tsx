@@ -4,13 +4,6 @@ import Text from '@component/Text/index'
 import DrinkRestaurant from '@/assets/drinks_restuarant.jpg'
 
 import PizzaMenu from '@/assets/pizza_menu.png'
-import BurgerMenu from '@/assets/burger_menu.png'
-import PastaMenu from '@/assets/pasta_menu.png'
-import ChickenMenu from '@/assets/chicken_menu.png'
-import DessertMenu from '@/assets/dessert_menu.png'
-import SandwichMenu from '@/assets/sandwich_menu.png'
-import ChickenRoastMenu from '@/assets/chicken_roast_menu.png'
-import { useRef, useState, useCallback } from 'react'
 import { Tab, TabList, TabListContent } from '@component/Tab'
 
 interface CatgoriesT {
@@ -18,50 +11,50 @@ interface CatgoriesT {
     name: string
 }
 
-const Store: React.FC = () => {
-    const [categories, setCategories] = useState<Array<CatgoriesT>>([
-        {
-            id: 1,
-            name: 'Pizza'
-        },
-        {
-            id: 2,
-            name: 'Sauce'
-        },
-        {
-            id: 3,
-            name: 'Bugers'
-        },
-        {
-            id: 4,
-            name: 'Candies'
-        },
-        {
-            id: 5,
-            name: 'Dounuts'
-        },
-        {
-            id: 1,
-            name: 'Pizza1'
-        },
-        {
-            id: 21,
-            name: 'Sauce1'
-        },
-        {
-            id: 31,
-            name: 'Bugers1'
-        },
-        {
-            id: 41,
-            name: 'Candies1'
-        },
-        {
-            id: 51,
-            name: 'Dounuts1'
-        }
-    ])
+const categories:Array<CatgoriesT> = [
+    {
+        id: 1,
+        name: 'Pizza'
+    },
+    {
+        id: 2,
+        name: 'Sauce'
+    },
+    {
+        id: 3,
+        name: 'Bugers'
+    },
+    {
+        id: 4,
+        name: 'Candies'
+    },
+    {
+        id: 5,
+        name: 'Dounuts'
+    },
+    {
+        id: 1,
+        name: 'Pizza1'
+    },
+    {
+        id: 21,
+        name: 'Sauce1'
+    },
+    {
+        id: 31,
+        name: 'Bugers1'
+    },
+    {
+        id: 41,
+        name: 'Candies1'
+    },
+    {
+        id: 51,
+        name: 'Dounuts1'
+    }
+]
 
+const Store: React.FC = () => {
     return (
         <div>
             <div className='bg-gray-200!'>
