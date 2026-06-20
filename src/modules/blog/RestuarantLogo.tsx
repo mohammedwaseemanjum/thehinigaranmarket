@@ -15,18 +15,18 @@ const ResturantLogo = () => {
             <div className='flex flex-row gap-2 mt-2'>
                 {
                     [1,2,3,4,5].map((_,index) => (
-                        <Skeleton className={'h-18.25 w-[clamp(3.125rem,2.6785714285714284rem+2.232142857142857vw,6.25rem)] rounded-lg'} isLoading={isLoading} key={index}/>
+                        <Skeleton className={'h-[clamp(50px,2.2321vw+42.8571px,100px)] w-[clamp(3.125rem,2.6785714285714284rem+2.232142857142857vw,6.25rem)] rounded-lg'} isLoading={isLoading} key={index}/>
                     ))
                 }
                 {
                     data?.map(restuarant => (
-                        <div className='w-[clamp(3.125rem,2.6785714285714284rem+2.232142857142857vw,6.25rem)]' key={restuarant.id}>
+                        <div className='h-[clamp(50px,2.2321vw+42.8571px,100px)] w-[clamp(3.125rem,2.6785714285714284rem+2.232142857142857vw,6.25rem)]' key={restuarant.id}>
                             <LazyImage
                                 key={restuarant.id}
                                 src={restuarant.image}
                                 alt={restuarant.name}
                                 className='object-contain rounded-lg'
-                                loaderClass='h-18.25 w-[clamp(3.125rem,2.6785714285714284rem+2.232142857142857vw,6.25rem)] rounded-lg'
+                                loaderClass='h-[clamp(50px,2.2321vw+42.8571px,100px)] w-[clamp(3.125rem,2.6785714285714284rem+2.232142857142857vw,6.25rem)] rounded-lg'
                             />
                         </div>
                     ))
